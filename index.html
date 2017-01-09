@@ -2,6 +2,16 @@
     <head>
         <meta charset="UTF-8">
         <title>喂喂注册测试界面</title>
+        <script src="jquery-1.8.3.min.js"></script>
+        <script>
+          $("#openA").click(function(){
+              alert("test");
+              var urls = "weweiconf://com.newrocktech.wewei/register?username="+$("[name=targetnumber]").val() +"&password=168034&address=192.168.130.214";
+              //window.open(urls);
+              console.log(urls);
+              location.href=urls;
+          });
+        </script>
     </head>
     <body>
         <h1>请在Safari内打开</h1>
@@ -17,5 +27,11 @@
         <a href="weweiconf://com.newrocktech.wewei/register?username=3006&password=029104&address=192.168.130.214">Register as 3006</a>
         <hr>
         <a href="weweiconf://com.newrocktech.wewei/call?address=3005&pattern=0">Call 3005</a>
+        <hr>
+            Dialer Number:<br>
+            <br>
+            <input type="text" name="targetnumber"><br>
+            <br>
+            <button type="button" id="openA">Click to dial</button>
     </body>
 </html>
