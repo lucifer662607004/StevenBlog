@@ -8,30 +8,46 @@
               var inputText = document.getElementById("targetnumber").value;
               window.open("weweiconf://com.newrocktech.wewei/call?address=" + inputText + "&pattern=0");
           }
+          function onRegisterClick(){
+              var username = document.getElementById("username").value;
+              var password = document.getElementById("password").value;
+              var address = document.getElementById("domain").value;
+              window.open("weweiconf://com.newrocktech.wewei/register?username="+username+"&password="+password+"&address="+address+"");
+          }
         </script>
     </head>
     <body>
-        <h1>请在Safari内打开</h1>
-        <p>点击下列按钮注册不同账号：</p>
+        <h1>喂喂临时设置界面</h1>
+        <p>喂喂测试版中的配置请通过以下web接口设置：</p>
+        <p>用户名：</p>
+        <input type="text" name="username" id="username">
+        <p>密码：</p>
+        <input type="text" name="password" id="password">
+        <p>域名：</p>
+        <input type="text" name="domain" id="domain">
+        <br>
+        <br>
+        <button type="button" id="reister" onclick="onRegisterClick()">注册</button>
+        <p>预配置快速设置接口（仅限调试用）</p>
         <a href="weweiconf://com.newrocktech.wewei/register?username=3002&password=546601&address=987654.3d00cd.sip.newrocktech.com:5090">Register as 3002 (穿透)</a>
-        <hr>
+        <br>
         <a href="weweiconf://com.newrocktech.wewei/register?username=3003&password=666027&address=192.168.130.214">Register as 3003</a>
-        <hr>
+        <br>
         <a href="weweiconf://com.newrocktech.wewei/register?username=3004&password=168034&address=192.168.130.214">Register as 3004</a>
-        <hr>
+        <br>
         <a href="weweiconf://com.newrocktech.wewei/register?username=3005&password=578071&address=192.168.130.214">Register as 3005</a>
-        <hr>
+        <br>
         <a href="weweiconf://com.newrocktech.wewei/register?username=3006&password=029104&address=192.168.130.214">Register as 3006</a>
-        <hr>
+        <br>
         <!--<a href="weweiconf://com.newrocktech.wewei/call?address=3005&pattern=0">Call 3005</a>
         <hr>-->
-        Dialer Number:<br>
-        <br>
+        <!--<br>
         <input type="text" name="targetnumber" id="targetnumber"><br>
         <br>
         <button type="button" id="openA" onclick="openAClick()">Click to dial</button>
-        <br>
+        <br>-->
         <hr>
-        <a href="weweiconf://com.newrocktech.wewei/delete?">Delete Current Account</a>
+        <p>如需更改账号注册请先删除当前帐号：</p>
+        <a href="weweiconf://com.newrocktech.wewei/delete?">点击删除当前帐号</a>
     </body>
 </html>
