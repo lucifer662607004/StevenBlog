@@ -1,0 +1,82 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>喂喂高级设置界面上线啦！</title>
+        <script type="text/javascript">
+        //   function openAClick(){
+        //       var inputText = document.getElementById("targetnumber").value;
+        //       window.open("weweiconf://com.newrocktech.wewei/call?address=" + inputText + "&pattern=0");
+        //   }
+        //   function onRegisterClick(){
+        //       var username = document.getElementById("username").value;
+        //       var password = document.getElementById("password").value;
+        //       var address = document.getElementById("domain").value;
+        //       window.open("weweiconf://com.newrocktech.wewei/register?username="+username+"&password="+password+"&address="+address+"");
+        //   }
+        function onSubmitClick(){
+            var jitter_buffer = document.getElementById("audio_jitter").value;
+            var adaptive_jitter = document.getElementById("adaptive_jitter").checked;
+            var u_ptime = document.getElementById("u_ptime").value;
+            var d_ptime = document.getElementById("d_ptime").value;
+            var sip_dscp = document.getElementById("sip_dscp").value;
+            var audio_dscp = document.getElementById("audio_dscp").value;
+            var mtu = document.getElementById("mtu").value;
+            var request = "weweiconf://com.newrocktech.wewei/advance?";
+            if (jitter_buffer.length != 0) {
+                request = request + "audio_jitter=" + jitter_buffer + "&";
+            }
+            if (adaptive_jitter) {
+                request = request + "adaptive_jitter=on&";
+            } else {
+                request = request + "adaptive_jitter=off&";
+            }
+            if (u_ptime.length != 0) {
+                request = request + "u_ptime=" + u_ptime + "&";
+            }
+            if (d_ptime.length != 0) {
+                request = request + "d_ptime=" + d_ptime + "&";
+            }
+            if (sip_dscp.length != 0) {
+                request = request + "sip_dscp=" + sip_dscp + "&";
+            }
+            if (audio_dscp.length != 0) {
+                request = request + "audio_dscp=" + audio_dscp + "&";
+            }
+            if (mtu.length != 0) {
+                request = request + "mtu=" + mtu + "&";
+            }
+
+            window.open(request);
+        }
+        function onCheckClick(){
+            window.open("weweiconf2://com.newrocktech.wewei/advance?");
+        }
+        </script>
+    </head>
+    <body>
+        <h1>喂喂高级设置界面隆重上线！🎉</h1>
+        <button type="button" id="check" onclick="onCheckClick()">直接查询当前状态</button>
+        <hr>
+        <p>Jitter Buffer Compensation: </p>
+        <input type="text" name="jitter_buffer" id="audio_jitter">
+        <p>Adaptive Jitter: </p>
+        <label><input type ="checkbox" id='adaptive_jitter' onclick = 'check(this)' checked="checked"/>enable</label><br/>
+        <!-- <input type ="checkbox" id='off' onclick = 'check(this)'/> -->
+        <p>Upload ptime: </p>
+        <input type="text" name="upload_ptime" id="u_ptime">
+        <p>Download ptime: </p>
+        <input type="text" name="download_ptime" id="d_ptime">
+        <p>SIP DSCP: </p>
+        <input type="text" name="sip_dscp" id="sip_dscp">
+        <p>AUDIO DSCP: </p>
+        <input type="text" name="audio_dscp" id="audio_dscp">
+        <p>MTU: </p>
+        <input type="text" name="mtu" id="mtu">
+        <br>
+        <br>
+        <hr>
+        </label><button type="button" id="submit" onclick="onSubmitClick()">提交</button>
+        <br>
+    </body>
+</html>
