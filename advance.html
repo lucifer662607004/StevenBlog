@@ -52,11 +52,15 @@
         function onCheckClick(){
             window.open("weweiconf2://com.newrocktech.wewei/advance?");
         }
+        function onRecordClick(){
+            window.open("weweiconf2://com.newrocktech.wewei/advance?record_next=on&");
+        }
         </script>
     </head>
     <body>
         <h1>喂喂高级设置界面隆重上线！🎉</h1>
         <button type="button" id="check" onclick="onCheckClick()">直接查询当前状态</button>
+        <button type="button" id="check" onclick="onRecordClick()">对下次通话进行录音</button>
         <hr>
         <p>Jitter Buffer Compensation: </p>
         <input type="text" name="jitter_buffer" id="audio_jitter">
