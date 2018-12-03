@@ -11,3 +11,5 @@ github_username:  zj299792458
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
+
+theme: jekyll-theme-merlot
