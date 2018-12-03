@@ -17,8 +17,8 @@ title: Steven Blog
 email: zj299792458@live.com
 description: >- # this means to ignore newlines until "baseurl:"
   Personal Blog Site
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/StevenPersonalBlog" # the subpath of your site, e.g. /blog
+url: "https://zj299792458.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  zj299792458
 
