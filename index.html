@@ -1,78 +1,11 @@
-<!Doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>喂喂注册测试界面</title>
-        <script type="text/javascript">
-          function openAClick(){
-              var inputText = document.getElementById("targetnumber").value;
-              window.open("weweiconf://com.newrocktech.wewei/call?address=" + inputText + "&pattern=0");
-          }
-          function onRegisterClick(){
-              var username = document.getElementById("username").value;
-              var password = document.getElementById("password").value;
-              var address = document.getElementById("domain").value;
-              window.open("weweiconf://com.newrocktech.wewei/register?username="+username+"&password="+password+"&address="+address+"");
-          }
-        </script>
-    </head>
-    <body>
-        <h1>喂喂临时设置界面</h1>
-        <!--
-        <p>喂喂测试版中的配置请通过以下web接口设置：</p>
-        <p>用户名：</p>
-        <input type="text" name="username" id="username">
-        <p>密码：</p>
-        <input type="text" name="password" id="password">
-        <p>域名：</p>
-        <input type="text" name="domain" id="domain">
-        <br>
-        <br>
-        <button type="button" id="reister" onclick="onRegisterClick()">注册</button>
-        <p>预配置快速设置接口（仅限调试用）</p>
-        <a href="weweiconf2://com.newrocktech.wewei/register?username=257&password=715797&address=155871.3D00CD.sip.newrocktech.com:5090">Register as 257 (穿透)</a>
-        <br>
-        <a href="weweiconf2://com.newrocktech.wewei/register?username=258&password=620581&address=155871.3D00CD.sip.newrocktech.com:5090">Register as 258 (穿透)</a>
-        <br>
-        -->
-        <!--<a href="weweiconf://com.newrocktech.wewei/call?address=3005&pattern=0">Call 3005</a>
-        <hr>-->
-        <!--<br>
-        <input type="text" name="targetnumber" id="targetnumber"><br>
-        <br>
-        <button type="button" id="openA" onclick="openAClick()">Click to dial</button>
-        <br>-->
-        <!--
-        <hr>
-        <p>如需更改账号注册请先删除当前帐号：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/delete?">点击删除当前帐号</a>
-        -->
-        <p>重现欢迎界面：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/welcome?">点击重现欢迎界面</a>
-        <p>重现指引界面：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/instruction?">点击重现指引界面</a>
-        <hr>
-        <p>后台待机开关：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/push?status=off">点击关闭</a>
-        <a href="weweiconf2://com.newrocktech.wewei/push?status=on">点击开启</a>
-        <hr>
-        <p>自动接听开关：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/test?autoanswer=off&">点击关闭</a>
-        <a href="weweiconf2://com.newrocktech.wewei/test?autoanswer=on&">点击开启</a>
-        <p>我不在中国</p>
-        <a href="weweiconf2://com.newrocktech.wewei/imnotinchina?">点击关闭</a>
-        <!--
-        <p>行为日志开关：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/behaviorlog?monitor=off&">点击关闭</a>
-        <a href="weweiconf2://com.newrocktech.wewei/behaviorlog?monitor=on&">点击开启</a>
-        <hr>
-        
-        <hr>
-        <p>推送统计：</p>
-        <a href="weweiconf2://com.newrocktech.wewei/delaystatistics?">显示统计</a>
-        <a href="weweiconf2://com.newrocktech.wewei/delaystatistics?reset=on&">重置统计</a>
-        <hr>
-        -->
-        <script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
-    </body>
-</html>
+---
+layout: default
+title: Blog 测试
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+　　{% for post in site.posts %}
+　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　{% endfor %}
+</ul>
