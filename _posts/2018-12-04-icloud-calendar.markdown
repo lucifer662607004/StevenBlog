@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "iCloud订阅大陆节假日调休日历"
-date:   2018-12-03 15:45:00
+date:   2018-12-04 15:45:00
 categories: Life
 ---
 <br/>
@@ -15,7 +15,7 @@ categories: Life
 使用iCloud同步全部设备。
 <br/>
 
-![示例](./resource/2018-12-04-iCloud_Calendar_1.png)
+![示例](https://github.com/zj299792458/StevenPersonalBlog/blob/master/_posts/resource/2018-12-04-iCloud_Calendar_1.png?raw=true)
 <br/>
 
 感谢作者，来源：[v2ex](https://www.v2ex.com/t/513944)
