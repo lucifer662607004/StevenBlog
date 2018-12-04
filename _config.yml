@@ -13,4 +13,4 @@ github_username:  zj299792458
 markdown: kramdown
 permalink: /:year/:title:output_ext
 
-theme: jekyll-theme-merlot
+theme: jekyll-theme-cayman
