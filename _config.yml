@@ -1,14 +1,14 @@
 # Site settings
 title: Steven
 email: zj299792458@live.com
-description: > # this means to ignore newlines until "baseurl:"
+description: # > means to ignore newlines until "baseurl:"
   这里是Steven的个人博客。
   本人擅长数学，爱好物理。
   本科被调剂至财务会计专业，辅修法律。
   研究生出国一年，转专业至计算机。
   阴差阳错尝试申请生物方向博士未果。
   回国后就业于通信领域，VoIP方向。
-  主要项目iOS开发，业余Android, Java, Python。
+  主要项目iOS开发，业余Android，Java，Python。
   自认为自己最大的优点是专一， 只要认定一个方向，绝不轻易改变。
 
 baseurl: "/StevenBlog" # the subpath of your site, e.g. /blog/
