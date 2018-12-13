@@ -1,4 +1,4 @@
-example
+Enjoy the power of jekyll!
 =======
 
-Jekyll example Project site
+Just for fun
