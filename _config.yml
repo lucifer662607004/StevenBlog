@@ -11,8 +11,8 @@ description: # > means to ignore newlines until "baseurl:"
   主要项目iOS开发，业余Android，Java，Python。<br>
   自认为自己最大的优点是专一， 只要认定一个方向，绝不轻易改变。<br>
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://STEVENBLOG.EU.ORG" # the base hostname & protocol for your site
+baseurl: "/stevenblog" # the subpath of your site, e.g. /blog/
+url: "http://zj299792458.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 encoding: utf-8
 github_username:  zj299792458
